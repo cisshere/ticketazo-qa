@@ -1,0 +1,15 @@
+{
+  "usuarioAdmin": {
+    "email": "admin@admin.com",
+    "password": "admin"
+  },
+  "usuarioComprador": {  
+    "email": "cis.shere@gmail.com",
+    "password": "pepe1234*"
+  },
+  "usuarioOrganizador": {
+    "email": "sherejinx@gmail.com",
+    "password": "Pepe12345*"
+  }
+}
+
