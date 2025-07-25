@@ -10,6 +10,11 @@
   "usuarioOrganizador": {
     "email": "sherejinx@gmail.com",
     "password": "Pepe12345*"
+  },
+
+  "usuarioOrganizadorEvento": {
+    "email": "eventos@eventoselek.com",
+    "password": "Eventos18."
   }
 }
 

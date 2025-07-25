@@ -1,0 +1,40 @@
+describe('Cargar Evento - Cliente', () => {
+    beforeEach(() => {
+        cy.clearCookies()
+        cy.clearLocalStorage()
+        cy.visit('https://ticketazo.com.ar/auth/login?callbackUrl=/newEvent')
+        cy.loginCliente()
+    })
+
+    it('Cargar Funcion exitosamente', () => {
+        cy.viewport(1366, 768)
+        cy.get('[data-cy="input-titulo"]').type('Evento de prueba')
+        cy.get('[data-type="day"]').click().type('15')
+        cy.get('[data-type="month"]').click().type('12')
+        cy.get('[data-type="year"]').click().type('2027')
+        cy.get('[data-cy="select-edad"]').click()
+        cy.get('[data-cy="option-edad-ATP"]').click();
+        cy.get('[data-cy="select-genero"]').click()
+        cy.get('[data-cy="option-genero-Festival"]').click();
+        cy.get('[data-cy="input-horario"] [data-type="hour"]').type('18');
+        cy.get('[data-cy="input-horario"] [data-type="minute"]').type('30');
+        cy.get('[data-cy="input-duracion"] [data-type="hour"]').type('02')
+        cy.get('[data-cy="input-duracion"] [data-type="minute"]').type('15')
+        cy.get('[data-cy="select-lugar-evento"] > .inline-flex').click()
+        cy.get('[role="option"]').contains('Otro').click(); 
+        cy.get('[data-cy="input-nombre-lugar"]').type('Lugar de prueba')
+        cy.get('[data-cy="input-calle-lugar"]').type('Calle de prueba')
+        cy.get('[data-cy="input-altura-lugar"]').type('1234')
+        cy.get('[data-cy="input-codigo-postal-lugar"]').type('1234')
+        cy.get('input[name="provincia"]').click().type('Buenos Aires')
+        cy.contains('[role="option"]', 'Buenos Aires').click()
+        cy.get('input[aria-label="Localidad"]').click().type('Avellaneda')
+        cy.contains('[role="option"]', 'Avellaneda').click()
+        cy.get('[data-cy="input-info"]').type('Informacion del evento de prueba')
+        cy.get('.rounded-b-large > .z-0').click()
+
+    })
+
+}
+)
+
