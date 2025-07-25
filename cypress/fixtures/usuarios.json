@@ -3,7 +3,7 @@
     "email": "admin@admin.com",
     "password": "admin"
   },
-  "usuarioComprador": {  
+  "usuarioComprador": {
     "email": "cis.shere@gmail.com",
     "password": "pepe1234*"
   },
@@ -12,4 +12,3 @@
     "password": "Pepe12345*"
   }
 }
-
