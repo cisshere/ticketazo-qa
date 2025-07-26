@@ -5,6 +5,20 @@ Cypress.Commands.add("login", (email, password) => {
   cy.get('[data-cy="btn-login"]').click();
 });
 
+/*********************************************************** */
+//instalar -> npm install --save-dev cypress-file-upload
+import 'cypress-file-upload'; //lib externa p/ simulacion se suba de img
+
+Cypress.Commands.add('mensajeToast', (textoEsp) => {
+  cy.get('.z-50 > .flex-grow', { timeout: 10000 })
+    .should(($mensaje) => {
+      //me aseguro que esté visible
+      expect($mensaje).to.have.css('opacity', '1');
+      expect($mensaje.text().trim()).to.include(textoEsp);
+    });
+  })
+
+
 Cypress.Commands.add("itemsNavMobile", (elementos) => {
   cy.get(".lg\\:hidden > .justify-end > .z-0").click();
   elementos.forEach((elemento) => {
@@ -26,3 +40,4 @@ Cypress.Commands.add('loginCliente', () => {
 });
 
 import 'cypress-file-upload';
+
