@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cypress run",
+    "open": "cypress open"
   },
   "keywords": [],
-  "author": "",
+  "author": "Equipo 4",
   "license": "ISC",
   "description": "",
   "devDependencies": {

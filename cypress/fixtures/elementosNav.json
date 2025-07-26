@@ -1,0 +1,27 @@
+{
+  "navAdmin": [
+    "Mis entradas",
+    "Cargar Evento",
+    "Mis Eventos",
+    "Editar Perfil",
+    "Estadisticas",
+    "Gestionar Salas",
+    "Escanear QR",
+    "AdminClientes",
+    "AdminEventos",
+    "Logout"
+  ],
+
+  "navComprador": ["Mis entradas", "Mi perfil", "Logout"],
+
+  "navOrganizador": [
+    "Mis entradas",
+    "Cargar Evento",
+    "Mis Eventos",
+    "Editar Perfil",
+    "Estadisticas",
+    "Gestionar Salas",
+    "Escanear QR",
+    "Logout"
+  ]
+}

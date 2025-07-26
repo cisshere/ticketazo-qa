@@ -3,13 +3,21 @@
     "email": "admin@admin.com",
     "password": "admin"
   },
-  "usuarioComprador": {  
+  "usuarioComprador": {
     "email": "cis.shere@gmail.com",
     "password": "pepe1234*"
+  },
+  "usuarioComprador2": {
+    "email": "f6gmf@mechanicspedia.com",
+    "password": "Pepe1234*"
   },
   "usuarioOrganizador": {
     "email": "sherejinx@gmail.com",
     "password": "Pepe12345*"
+  },
+
+  "usuarioOrganizadorEvento": {
+    "email": "eventos@eventoselek.com",
+    "password": "Eventos18."
   }
 }
-
