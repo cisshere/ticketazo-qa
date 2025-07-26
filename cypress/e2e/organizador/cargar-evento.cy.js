@@ -13,15 +13,15 @@ describe('Cargar Evento - Cliente', () => {
         cy.get('[data-type="month"]').click().type('12')
         cy.get('[data-type="year"]').click().type('2027')
         cy.get('[data-cy="select-edad"]').click()
-        cy.get('[data-cy="option-edad-ATP"]').click();
+        cy.get('[data-cy="option-edad-ATP"]').click()
         cy.get('[data-cy="select-genero"]').click()
-        cy.get('[data-cy="option-genero-Festival"]').click();
-        cy.get('[data-cy="input-horario"] [data-type="hour"]').type('18');
-        cy.get('[data-cy="input-horario"] [data-type="minute"]').type('30');
+        cy.get('[data-cy="option-genero-Festival"]').click()
+        cy.get('[data-cy="input-horario"] [data-type="hour"]').type('18')
+        cy.get('[data-cy="input-horario"] [data-type="minute"]').type('30')
         cy.get('[data-cy="input-duracion"] [data-type="hour"]').type('02')
         cy.get('[data-cy="input-duracion"] [data-type="minute"]').type('15')
         cy.get('[data-cy="select-lugar-evento"] > .inline-flex').click()
-        cy.get('[role="option"]').contains('Otro').click(); 
+        cy.get('[role="option"]').contains('Otro').click()
         cy.get('[data-cy="input-nombre-lugar"]').type('Lugar de prueba')
         cy.get('[data-cy="input-calle-lugar"]').type('Calle de prueba')
         cy.get('[data-cy="input-altura-lugar"]').type('1234')
@@ -32,9 +32,14 @@ describe('Cargar Evento - Cliente', () => {
         cy.contains('[role="option"]', 'Avellaneda').click()
         cy.get('[data-cy="input-info"]').type('Informacion del evento de prueba')
         cy.get('.rounded-b-large > .z-0').click()
-
+        cy.get('[data-slot="trigger"]').click().type('General')
+        cy.get('.max-w-sm > .relative > .inline-flex').type('4000')
+        cy.get(':nth-child(3) > .group > .relative > .inline-flex').type('20000')
+        cy.get('.rounded-b-large > :nth-child(2)').click()
+        cy.get('input[type="file"]').attachFile('foto_evento.jpeg', { force: true })
+        cy.get('[data-hover="true"]').click()
+        cy.get('.rounded-b-large > .bg-primary').click()
     })
-
 }
 )
 

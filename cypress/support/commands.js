@@ -24,3 +24,5 @@ Cypress.Commands.add('loginCliente', () => {
   cy.get('[data-cy="input-password"]').type('Eventos18.');
   cy.get('[data-cy="btn-login"]').click();
 });
+
+import 'cypress-file-upload';
