@@ -13,7 +13,7 @@ Este repositorio contiene pruebas automatizadas con Cypress para el sitio [Ticke
 git clone https://github.com/cisshere/ticketazo-qa.git
 cd ticketazo-qa
 
-3. Instalar las dependencias:
+2. Instalar las dependencias:
 
 bash
 npm install
