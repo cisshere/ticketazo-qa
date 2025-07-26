@@ -15,7 +15,6 @@ cd ticketazo-qa
 
 2. Instalar las dependencias:
 
-bash
 npm install
 
 ##  Ejecutar
@@ -28,5 +27,7 @@ Para abrir el Test Runner con interfaz gráfica:
 
 npm run cypress
 
+## Librerias externas:
 
+Para la carga de imagen en Editar Perfil : npm install --save-dev cypress-file-upload
 
