@@ -1,9 +1,13 @@
+# Equipo 4
+
 # ticketazo-qa
 
 Proyecto de Pruebas E2E con Cypress - Ticketazo
 
 Este repositorio contiene pruebas automatizadas con Cypress para el sitio [Ticketazo](https://ticketazo.com.ar).
-
+# Documentación
+- Casos de prueba en google sheets (https://docs.google.com/spreadsheets/d/1GX3HWVKDpas7yRuKcr47RHdwq3nGWO1l0C0kL2NM73Y/edit?gid=1420265067#gid=1420265067).
+- Reportes de bug en Trelo (https://trello.com/b/qnGl3uyw/casosdeprueba-ticketazo).
 ---
 
 ##  Instalación 
