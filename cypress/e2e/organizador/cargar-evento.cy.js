@@ -6,7 +6,7 @@ describe('Cargar Evento - Cliente', () => {
         cy.loginCliente()
     })
 
-    it.skip('Cargar Funcion exitosamente', () => {
+    it('Cargar Funcion exitosamente desktop', () => {
         cy.viewport(1366, 768)
         cy.get('[data-cy="input-titulo"]').type('Evento de prueba')
         cy.get('[data-type="day"]').click().type('15')
@@ -41,7 +41,7 @@ describe('Cargar Evento - Cliente', () => {
         cy.get('.rounded-b-large > .bg-primary').click()
     })
 
-    it('Cargar Funcion exitosamente', () => {
+    it('Cargar Funcion exitosamente mobile', () => {
         cy.viewport("iphone-8")
         cy.get('[data-cy="input-titulo"]').type('Evento de prueba')
         cy.get('[data-type="day"]').click().type('15')
