@@ -6,18 +6,19 @@ Este repositorio contiene pruebas automatizadas con Cypress para el sitio [Ticke
 
 ---
 
-##  Instalación
+##  Instalación 
 
-1. Clonar este repositorio:
+1. Clonar repositorio
 
-```bash
-git clone https://github.com/tu-usuario/ticketazo-qa.git
+git clone https://github.com/cisshere/ticketazo-qa.git
 cd ticketazo-qa
 
-Instalar las dependencias:
+3. Instalar las dependencias:
 
 bash
 npm install
+
+##  Ejecutar
 
 Para abrir cypress:
 
