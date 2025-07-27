@@ -8,6 +8,7 @@ describe('Cargar Evento - Cliente', () => {
 
     it('Cargar Funcion exitosamente desktop', () => {
         cy.viewport(1366, 768)
+        cy.intercept('POST', '**/api/backend/**').as('postBackend')
         cy.get('[data-cy="input-titulo"]').type('Evento de prueba')
         cy.get('[data-type="day"]').click().type('15')
         cy.get('[data-type="month"]').click().type('12')
@@ -39,6 +40,10 @@ describe('Cargar Evento - Cliente', () => {
         cy.get('input[type="file"]').attachFile('foto_evento.jpeg', { force: true })
         cy.get('[data-hover="true"]').click()
         cy.get('.rounded-b-large > .bg-primary').click()
+        cy.wait('@postBackend').then((interception) => {
+        expect(interception.response.statusCode).to.eq(201) 
+        cy.log('Respuesta del backend:', interception.response.body)
+    })
     })
 
     it('Cargar Funcion exitosamente mobile', () => {
