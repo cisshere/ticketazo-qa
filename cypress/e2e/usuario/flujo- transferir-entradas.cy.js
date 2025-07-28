@@ -6,10 +6,15 @@ describe("Página inicial de ticketazo", () => {
     cy.fixture("usuarios").then((users) => {
       cy.login(users.usuarioComprador2.email, users.usuarioComprador2.password);
     });
+    cy.intercept(
+      "POST",
+      "https://vps-3696213-x.dattaweb.com/api/backend/qr/transfer"
+    ).as("TransferenciaEntrada");
   });
 
   it("Flujo transferir entrada hacia otro usuarioComprador desde mi pc", () => {
     cy.viewport(1366, 768);
+
     cy.contains("li", "Mis entradas").click();
     cy.get('[data-cy="btn-ver-entradas-30"]').click();
     cy.get('[data-cy="btn-ver-ticket-2143"]').click();
@@ -17,6 +22,10 @@ describe("Página inicial de ticketazo", () => {
     cy.get("#email").type("cis.shere@gmail.com");
     cy.get(".space-y-4 > .flex > .bg-primary").click();
     cy.get(".flex-row > .bg-primary").click();
+
+    cy.wait("@TransferenciaEntrada").then((interception) => {
+      expect(interception.response.statusCode).to.eq(200);
+    });
   });
 
   it("Flujo transferir entradas con resolución de dispositivo movil", () => {
@@ -29,5 +38,8 @@ describe("Página inicial de ticketazo", () => {
     cy.get("#email").type("cis.shere@gmail.com");
     cy.get(".space-y-4 > .flex > .bg-primary").click();
     cy.get(".flex-row > .bg-primary").click();
+    cy.wait("@TransferenciaEntrada").then((interception) => {
+      expect(interception.response.statusCode).to.eq(200);
+    });
   });
 });
