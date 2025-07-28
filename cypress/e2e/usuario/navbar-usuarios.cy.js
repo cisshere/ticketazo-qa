@@ -11,7 +11,7 @@ describe("Página inicial de ticketazo", () => {
     });
     cy.viewport(1366, 768);
     cy.fixture("elementosNav").then((elementos) => {
-      cy.itemsNavPc(elementos.navAdmin);
+      cy.itemsNavPc(elementos.navAdminPc);
     });
   });
 
@@ -21,7 +21,7 @@ describe("Página inicial de ticketazo", () => {
     });
     cy.viewport("iphone-8");
     cy.fixture("elementosNav").then((elementos) => {
-      cy.itemsNavMobile(elementos.navAdmin);
+      cy.itemsNavMobile(elementos.navAdminMobile);
     });
   });
 
@@ -31,7 +31,7 @@ describe("Página inicial de ticketazo", () => {
     });
     cy.viewport(1366, 768);
     cy.fixture("elementosNav").then((elementos) => {
-      cy.itemsNavPc(elementos.navComprador);
+      cy.itemsNavPc(elementos.navCompradorPc);
     });
   });
 
@@ -41,7 +41,7 @@ describe("Página inicial de ticketazo", () => {
     });
     cy.viewport("iphone-8");
     cy.fixture("elementosNav").then((elementos) => {
-      cy.itemsNavMobile(elementos.navComprador);
+      cy.itemsNavMobile(elementos.navCompradorMobile);
     });
   });
 
@@ -54,7 +54,7 @@ describe("Página inicial de ticketazo", () => {
     });
     cy.viewport(1366, 768);
     cy.fixture("elementosNav").then((elementos) => {
-      cy.itemsNavPc(elementos.navOrganizador);
+      cy.itemsNavPc(elementos.navOrganizadorPc);
     });
   });
 
@@ -67,7 +67,7 @@ describe("Página inicial de ticketazo", () => {
     });
     cy.viewport("iphone-8");
     cy.fixture("elementosNav").then((elementos) => {
-      cy.itemsNavMobile(elementos.navOrganizador);
+      cy.itemsNavMobile(elementos.navOrganizadorMobile);
     });
   });
 });
