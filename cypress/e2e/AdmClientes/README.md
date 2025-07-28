@@ -1,0 +1,5 @@
+# Test AdmContarClientes
+Este test automatizado tiene como objetivo verificar que el número total de clientes mostrado en un contador de la interfaz de usuario coincide exactamente con la cantidad de clientes listados en una tabla de la misma página. Esta automatización es crucial porque visualmente es difícil determinar la cantidad real de clientes en la interfaz actual debido a que la presentación de la tabla no está paginada ni incluye una columna con un identificador o número de orden correlativo para cada cliente. (OPORTUNIDAD DE MEJORA).
+
+# Test AdmValidarCuit
+Este test automatizado tiene como objetivo auditar la calidad de los datos de los CUIT (dato critico) de los clientes tipo 'Establecimiento' en la plataforma. Su función es asegurar que cada CUIT de estos clientes cumpla con un formato específico: debe constar exactamente de 11 dígitos y ser exclusivamente numérico. 
