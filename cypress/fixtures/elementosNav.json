@@ -1,5 +1,6 @@
 {
-  "navAdmin": [
+  "navAdminPc": [
+    "Ticketazo",
     "Mis entradas",
     "Cargar Evento",
     "Mis Eventos",
@@ -11,10 +12,33 @@
     "AdminEventos",
     "Logout"
   ],
+  "navAdminMobile": [
+    "Mis entradas",
+    "Cargar Evento",
+    "Mis Eventos",
+    "Editar Perfil",
+    "Estadisticas",
+    "Gestionar Salas",
+    "Escanear QR",
+    "AdminClientes",
+    "AdminEventos",
+    "Logout"
+  ],
+  "navCompradorPc": ["Ticketazo", "Mis entradas", "Mi perfil", "Logout"],
+  "navCompradorMobile": ["Mis entradas", "Mi perfil", "Logout"],
 
-  "navComprador": ["Mis entradas", "Mi perfil", "Logout"],
-
-  "navOrganizador": [
+  "navOrganizadorPc": [
+    "Ticketazo",
+    "Mis entradas",
+    "Cargar Evento",
+    "Mis Eventos",
+    "Editar Perfil",
+    "Estadisticas",
+    "Gestionar Salas",
+    "Escanear QR",
+    "Logout"
+  ],
+  "navOrganizadorMobile": [
     "Mis entradas",
     "Cargar Evento",
     "Mis Eventos",
