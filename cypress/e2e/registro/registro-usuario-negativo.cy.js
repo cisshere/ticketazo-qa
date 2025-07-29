@@ -46,12 +46,26 @@ it('Debería mostrar un error si el usuario es menor de edad', () => {
 
 
 it('Muestra una alerta de error al ingresar una fecha de nacimiento futura', () => {
-    cy.get('[data-type="day"]').type('02'); // Escribimos el dia de nacimiento
-    cy.get('[data-type="month"]').type('12'); // Escribimos el mes de nacimiento
-    cy.get('[data-type="year"]').type('2028'); // Escribimos el año de nacimiento
-    cy.get('[data-cy="btn-registrarse"]').click();
-    cy.get('[data-slot="base"][data-has-end-content="true"] > .hidden').contains('El valor debe ser 27/7/2025 o anterior.');
+// Paso 1: Ingresar una fecha futura
+cy.get('[data-type="day"]').type('02');
+cy.get('[data-type="month"]').type('12');
+cy.get('[data-type="year"]').type('2028');
+cy.get('[data-cy="btn-registrarse"]').click();
+
+// Paso 2: Generar fecha actual sin ceros delante
+const today = new Date();
+const day = today.getDate(); 
+const month = today.getMonth() + 1; // Mes base 0
+const year = today.getFullYear();
+const todayFormatted = `${day}/${month}/${year}`;
+
+// Paso 3: Verificar el mensaje de error
+cy.get('[data-slot="base"][data-has-end-content="true"] > .hidden', { timeout: 10000 })
+.invoke('text')
+.should('include', `El valor debe ser ${todayFormatted} o anterior.`);
 });
+
+
 
 it('Test de email inválido', () => {
     const emailSinarroba = 'testingemail.com';
